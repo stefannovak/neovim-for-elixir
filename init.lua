@@ -249,13 +249,17 @@ require('lazy').setup({
     },
   },
 
+    -- File tree
   {
-    -- Highlight, edit, and navigate code
-    'nvim-treesitter/nvim-treesitter',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
-    },
-    build = ':TSUpdate',
+      "nvim-tree/nvim-tree.lua",
+      version = "*",
+      lazy = false,
+      requires = {
+        "nvim-tree/nvim-web-devicons",
+      },
+      config = function()
+          require("nvim-tree").setup {}
+        end,
   },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
