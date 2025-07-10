@@ -331,7 +331,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+-- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- My keymap suggestions
@@ -356,6 +356,9 @@ vim.keymap.set('n', 'gJ', '<cmd>join<cr>', { silent = true })
 
 -- I have weird Emacs muscle memory, so you probably should use a different keybind for deleting buffers
 vim.keymap.set('n', '<c-x><c-k>', '<cmd>bd<cr>', { silent = true })
+
+-- Tree
+vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<cr>")
 
 -- I prefer cursor in the center
 vim.o.scrolloff = 999
